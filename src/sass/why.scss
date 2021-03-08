@@ -1,0 +1,18 @@
+.Why{
+    background: var(--Gray);
+    padding: 5em 0;
+    text-align: center;
+
+    .p{
+        margin-bottom: 4em;
+    }
+
+    &__item{
+        .p{
+            margin-bottom: 2em;
+        }
+        img{
+            margin-bottom: 1.5em;
+        }
+    }
+}

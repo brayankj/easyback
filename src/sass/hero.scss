@@ -1,0 +1,16 @@
+.Hero{
+    text-align: center;
+    padding-bottom: 5em;
+
+    &__image{
+        background: url(../images/image-mockups.png) center bottom no-repeat, url(../../static/images/bg-intro-mobile.svg) center no-repeat;
+        background-size: 345px,  cover;
+        height: 300px;
+        margin: 0 calc( -1 * var(--wrapperSpace) );
+        margin-bottom: 1em;
+    }
+
+    .p{
+        margin-bottom: 2.5em;
+    }
+}
