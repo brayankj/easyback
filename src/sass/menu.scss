@@ -1,4 +1,71 @@
 .menu{
-    background: url('../images/icon-hamburger.svg') center no-repeat;
-    width: 40px;
+    display: none;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    &__button {
+        background: url('../images/icon-hamburger.svg') center no-repeat;
+        height: 40px;
+        width: 40px;
+    }
+
+    a{
+        text-decoration: none;
+        color: var(--Blue);
+        padding: 0 .8em;
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+    }
+
+    &__checkbox{
+        display: none;
+        &:checked{
+            & ~ .menu__button{
+                background: url('../images/icon-close.svg') center no-repeat;
+            }
+
+            & ~ .menu{
+                display: block;
+                position: absolute;
+                top: 100%;
+                padding: 1em;
+                left: 0;
+                right: 0;
+                height: 100vh;
+                background: linear-gradient( to bottom, var(--Dark) 0%, transparent 90% );
+
+                .menu__item{
+                    
+                    &:first-of-type a{
+                        border-radius: .5em .5em 0 0;
+                        padding-top: 2em;
+                    }
+                    &:last-of-type a{
+                        padding-bottom: 2em;
+                        border-radius:  0 0 .5em .5em;
+                    }
+                }
+                a{
+                    background: var(--white);
+                    padding: .8em 1em;
+                    display: block;
+                    text-align: center;
+                    font-size: 1.1em;
+                    width: 100%;
+                    box-shadow: 2px 2px 0 var(--white);
+                }
+            }
+        }
+    }
+
+    @media screen and (min-width: 1024px) {
+        display: flex;
+        &__button {
+            display: none;
+        }
+    }
 }
